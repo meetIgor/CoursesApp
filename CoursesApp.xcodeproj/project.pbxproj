@@ -56,15 +56,79 @@
 		ADF6C64A2904134300676948 /* CoursesApp */ = {
 			isa = PBXGroup;
 			children = (
-				ADF6C64B2904134300676948 /* AppDelegate.swift */,
-				ADF6C64D2904134300676948 /* SceneDelegate.swift */,
-				ADF6C64F2904134300676948 /* ViewController.swift */,
-				ADF6C6512904134300676948 /* Main.storyboard */,
-				ADF6C6542904134300676948 /* Assets.xcassets */,
-				ADF6C6562904134300676948 /* LaunchScreen.storyboard */,
-				ADF6C6592904134300676948 /* Info.plist */,
+				ADF6C6652904195300676948 /* Models */,
+				ADF6C6642904194700676948 /* Services */,
+				ADF6C663290418F700676948 /* CourseDetails */,
+				ADF6C661290418C000676948 /* App */,
+				ADF6C662290418E900676948 /* CourseList */,
+				ADF6C65F2904184B00676948 /* Storyboard */,
+				ADF6C6602904188A00676948 /* Resources */,
 			);
 			path = CoursesApp;
+			sourceTree = "<group>";
+		};
+		ADF6C65F2904184B00676948 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ADF6C6512904134300676948 /* Main.storyboard */,
+				ADF6C6562904134300676948 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		ADF6C6602904188A00676948 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADF6C6542904134300676948 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADF6C661290418C000676948 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ADF6C64B2904134300676948 /* AppDelegate.swift */,
+				ADF6C64D2904134300676948 /* SceneDelegate.swift */,
+				ADF6C6592904134300676948 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ADF6C662290418E900676948 /* CourseList */ = {
+			isa = PBXGroup;
+			children = (
+				ADF6C64F2904134300676948 /* ViewController.swift */,
+				ADF6C6662904196E00676948 /* CourceCell */,
+			);
+			path = CourseList;
+			sourceTree = "<group>";
+		};
+		ADF6C663290418F700676948 /* CourseDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CourseDetails;
+			sourceTree = "<group>";
+		};
+		ADF6C6642904194700676948 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ADF6C6652904195300676948 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADF6C6662904196E00676948 /* CourceCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CourceCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoursesApp/Info.plist;
+				INFOPLIST_FILE = CoursesApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoursesApp/Info.plist;
+				INFOPLIST_FILE = CoursesApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
