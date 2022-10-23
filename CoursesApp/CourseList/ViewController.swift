@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var courses: [Course] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    private func getCourses() {
+        NetworkManager.shared.fetchCourse(from: Link.coursesURL.rawValue) { [unowned self] result in
+            switch result {
+            case .success(let courses):
+                self.courses = courses
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 

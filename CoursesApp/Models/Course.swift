@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Course {
+struct Course: Decodable {
     let name: String
     let imageUrl: String
     let numberOfLessons: Int
