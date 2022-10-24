@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD6679B0290570EF004522D5 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679AF290570EF004522D5 /* CourseCell.swift */; };
+		AD6679B229057915004522D5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679B129057915004522D5 /* DataManager.swift */; };
 		ADF6C64C2904134300676948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64B2904134300676948 /* AppDelegate.swift */; };
 		ADF6C64E2904134300676948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64D2904134300676948 /* SceneDelegate.swift */; };
-		ADF6C6502904134300676948 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64F2904134300676948 /* ViewController.swift */; };
+		ADF6C6502904134300676948 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64F2904134300676948 /* CourseListViewController.swift */; };
 		ADF6C6532904134300676948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF6C6512904134300676948 /* Main.storyboard */; };
 		ADF6C6552904134300676948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF6C6542904134300676948 /* Assets.xcassets */; };
 		ADF6C6582904134300676948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF6C6562904134300676948 /* LaunchScreen.storyboard */; };
 		ADF6C66829041A6C00676948 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C66729041A6C00676948 /* Course.swift */; };
 		ADF6C66A29041DC100676948 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C66929041DC100676948 /* NetworkManager.swift */; };
+		ADF6C66C290551F200676948 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C66B290551F200676948 /* CourseDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD6679AF290570EF004522D5 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		AD6679B129057915004522D5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ADF6C6482904134300676948 /* CoursesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoursesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF6C64B2904134300676948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF6C64D2904134300676948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADF6C64F2904134300676948 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADF6C64F2904134300676948 /* CourseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		ADF6C6522904134300676948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADF6C6542904134300676948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADF6C6572904134300676948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADF6C6592904134300676948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADF6C66729041A6C00676948 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		ADF6C66929041DC100676948 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ADF6C66B290551F200676948 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,7 @@
 		ADF6C662290418E900676948 /* CourseList */ = {
 			isa = PBXGroup;
 			children = (
-				ADF6C64F2904134300676948 /* ViewController.swift */,
+				ADF6C64F2904134300676948 /* CourseListViewController.swift */,
 				ADF6C6662904196E00676948 /* CourceCell */,
 			);
 			path = CourseList;
@@ -110,6 +116,7 @@
 		ADF6C663290418F700676948 /* CourseDetails */ = {
 			isa = PBXGroup;
 			children = (
+				ADF6C66B290551F200676948 /* CourseDetailsViewController.swift */,
 			);
 			path = CourseDetails;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF6C66929041DC100676948 /* NetworkManager.swift */,
+				AD6679B129057915004522D5 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 		ADF6C6662904196E00676948 /* CourceCell */ = {
 			isa = PBXGroup;
 			children = (
+				AD6679AF290570EF004522D5 /* CourseCell.swift */,
 			);
 			path = CourceCell;
 			sourceTree = "<group>";
@@ -208,8 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF6C66C290551F200676948 /* CourseDetailsViewController.swift in Sources */,
+				AD6679B229057915004522D5 /* DataManager.swift in Sources */,
 				ADF6C66829041A6C00676948 /* Course.swift in Sources */,
-				ADF6C6502904134300676948 /* ViewController.swift in Sources */,
+				ADF6C6502904134300676948 /* CourseListViewController.swift in Sources */,
+				AD6679B0290570EF004522D5 /* CourseCell.swift in Sources */,
 				ADF6C66A29041DC100676948 /* NetworkManager.swift in Sources */,
 				ADF6C64C2904134300676948 /* AppDelegate.swift in Sources */,
 				ADF6C64E2904134300676948 /* SceneDelegate.swift in Sources */,
