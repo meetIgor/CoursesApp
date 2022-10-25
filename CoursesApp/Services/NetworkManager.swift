@@ -22,7 +22,7 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchImgae(from url: String?, completion: @escaping (Result<Data, NetworkError>) -> Void) {
+    func fetchImage(from url: String?, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         guard let url = URL(string: url ?? "") else {
             completion(.failure(.invalidURL))
             return
@@ -37,6 +37,12 @@ class NetworkManager {
                 completion(.success(imageData))
             }
         }
+    }
+    
+    func fetchImageData(from url: String?) -> Data? {
+        guard let url = URL(string: url ?? "") else { return nil }
+        guard let imageData = try? Data(contentsOf: url) else { return nil }
+        return imageData
     }
     
     func fetchCourse(from url: String?, completion: @escaping (Result<[Course],NetworkError>) -> Void) {
