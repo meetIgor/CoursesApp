@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AD6679B0290570EF004522D5 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679AF290570EF004522D5 /* CourseCell.swift */; };
 		AD6679B229057915004522D5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679B129057915004522D5 /* DataManager.swift */; };
+		AD6679B42906A5C4004522D5 /* CourseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679B32906A5C4004522D5 /* CourseDetailsViewModel.swift */; };
+		AD6679B62906CE0E004522D5 /* CourseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679B52906CE0E004522D5 /* CourseListViewModel.swift */; };
+		AD6679B82907E46A004522D5 /* CourseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6679B72907E46A004522D5 /* CourseCellViewModel.swift */; };
 		ADF6C64C2904134300676948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64B2904134300676948 /* AppDelegate.swift */; };
 		ADF6C64E2904134300676948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64D2904134300676948 /* SceneDelegate.swift */; };
 		ADF6C6502904134300676948 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6C64F2904134300676948 /* CourseListViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		AD6679AF290570EF004522D5 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		AD6679B129057915004522D5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AD6679B32906A5C4004522D5 /* CourseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewModel.swift; sourceTree = "<group>"; };
+		AD6679B52906CE0E004522D5 /* CourseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListViewModel.swift; sourceTree = "<group>"; };
+		AD6679B72907E46A004522D5 /* CourseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellViewModel.swift; sourceTree = "<group>"; };
 		ADF6C6482904134300676948 /* CoursesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoursesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF6C64B2904134300676948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF6C64D2904134300676948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF6C64F2904134300676948 /* CourseListViewController.swift */,
+				AD6679B52906CE0E004522D5 /* CourseListViewModel.swift */,
 				ADF6C6662904196E00676948 /* CourceCell */,
 			);
 			path = CourseList;
@@ -117,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF6C66B290551F200676948 /* CourseDetailsViewController.swift */,
+				AD6679B32906A5C4004522D5 /* CourseDetailsViewModel.swift */,
 			);
 			path = CourseDetails;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AD6679AF290570EF004522D5 /* CourseCell.swift */,
+				AD6679B72907E46A004522D5 /* CourseCellViewModel.swift */,
 			);
 			path = CourceCell;
 			sourceTree = "<group>";
@@ -218,9 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF6C66C290551F200676948 /* CourseDetailsViewController.swift in Sources */,
+				AD6679B62906CE0E004522D5 /* CourseListViewModel.swift in Sources */,
 				AD6679B229057915004522D5 /* DataManager.swift in Sources */,
+				AD6679B82907E46A004522D5 /* CourseCellViewModel.swift in Sources */,
 				ADF6C66829041A6C00676948 /* Course.swift in Sources */,
 				ADF6C6502904134300676948 /* CourseListViewController.swift in Sources */,
+				AD6679B42906A5C4004522D5 /* CourseDetailsViewModel.swift in Sources */,
 				AD6679B0290570EF004522D5 /* CourseCell.swift in Sources */,
 				ADF6C66A29041DC100676948 /* NetworkManager.swift in Sources */,
 				ADF6C64C2904134300676948 /* AppDelegate.swift in Sources */,
