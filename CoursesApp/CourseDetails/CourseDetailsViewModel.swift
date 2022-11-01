@@ -15,8 +15,8 @@ protocol CourseDetailsViewModelProtocol {
     var numberOfLessons: String { get }
     var numberOfTests: String { get }
     var imageData: Data? { get }
-    var isFavorite: Bool { get }
-    var viewModelDidChanged: ((CourseDetailsViewModelProtocol) -> Void)? { get set }
+    var isFavorite: Box<Bool> { get }
+    var viewModelDidChange: ((CourseDetailsViewModelProtocol) -> Void)? { get set }
     init(course: Course) // экз-р модели для отображения данных
     func favoriteButtonPressed()
 }
@@ -36,22 +36,11 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
         "number of tests: \(course.numberOfTests)"
     }
     
-    var imageData: Data? {
-        NetworkManager.shared.fetchImageData(from: course.imageUrl)
-    }
+    var imageData: Data?
     
-    var viewModelDidChanged: ((CourseDetailsViewModelProtocol) -> Void)?
+    var viewModelDidChange: ((CourseDetailsViewModelProtocol) -> Void)?
     
-    var isFavorite: Bool {
-        get {
-            DataManager.shared.getFavoriteStatus(for: course.name)
-        } set {
-            DataManager.shared.setFavoriteStatus(for: course.name, with: newValue)
-            // возвращаем обновленное состояние модели представления
-            // в нем и будет обновленное значение св-ва isFavourite
-            viewModelDidChanged?(self)
-        }
-    }
+    var isFavorite: Box<Bool>
     
     // view, обращаясь напрямую к модели представления, ничего не должна знать про модель,
     //поэтому прячем эту модель, делая ее приватной
@@ -59,10 +48,22 @@ class CourseDetailsViewModel: CourseDetailsViewModelProtocol {
     
     required init(course: Course) {
         self.course = course
+        isFavorite = Box(DataManager.shared.getFavoriteStatus(for: course.name))
+        
+        NetworkManager.shared.fetchImage(from: course.imageUrl) { [unowned self] result in
+            switch result {
+            case .success(let imageData):
+                self.imageData = imageData
+                viewModelDidChange?(self)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func favoriteButtonPressed() {
-        isFavorite.toggle()
+        isFavorite.value.toggle()
+        DataManager.shared.setFavoriteStatus(for: course.name, with: isFavorite.value)
     }
     
 }
